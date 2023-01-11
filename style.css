@@ -1,22 +1,76 @@
 header{                      /*header*/
     width: 100%;
-    height: 40px;
     background-color: rgb(22, 18, 18);
     color: antiquewhite;
     display: flex;
     align-items: center;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
+h3{
+    margin-right: 80%;
 }
 
-main{
-    content: "";
-    display: table;
-    clear: both;
-}
+/* Nav hamburger*/
+
+
+.nav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.5s ease;
+  }
+  
+  /* Liens navbar */
+  .nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #111;
+  }
+  
+  .nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .nav.active {
+    left: 0;
+  }
+  
+  /* Fermer le bouton */
+  .nav .fermer {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+  }
+  
+  /* Icône burger */
+  .iconHamburger  span {
+    margin-right: 70%;
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+  }
+  
+
+
+
 
 
 #principale{          /*partie principale*/
@@ -26,8 +80,16 @@ main{
     border-right: 2px solid  rgb(54, 54, 56);
     margin-left: 30px;
     font-size: 18px;
+    display: flex;
+}
 
+h1{
+    display: flex;
+    justify-content: center;
+}
 
+#partieGauche{
+    flex: 1;
 }
 
 .maj{
@@ -61,13 +123,10 @@ main{
 
 #partieDroite{
     float: right;
-    width: 30%;
-    height: 150px;
     border-bottom: 2px solid black;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    padding-top: 10px;
+    position: relative;
+    
+
 
 }
 
@@ -77,17 +136,21 @@ ul{
     gap: 10px;
 }
 
-#liens{
+
+
+#liens1{
+    border:rgb(22, 18, 18) solid 2px;
+    border-radius: 10px;
+    height: 300px;
+    width: 70%;
+}
+#liens2{
     border:rgb(22, 18, 18) solid 2px;
     border-radius: 10px;
     height: 300px;
     width: 70%;
     margin-left: 30px;
-    float: top;
-    
-    
-    
-
+    float: top; 
 }
 
 #partieDroite h2{
